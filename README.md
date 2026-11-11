@@ -42,4 +42,5 @@ CDC WONDER: https://wonder.cdc.gov/natality-current.html
 I relied on YouTube to understand how to build this project. 
 
 Hands-on Tableau Tutorial: https://youtu.be/lrl0vz-p-yc?si=pRELAi0qrt5fhERx 
+Understanding/obtaining the CDC Data: https://www.youtube.com/watch?v=nVba-4lobto 
 
