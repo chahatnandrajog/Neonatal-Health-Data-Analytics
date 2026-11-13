@@ -30,4 +30,28 @@ FROM dbo.birth_weight
 GROUP BY year
 ORDER BY year;
 
---KPI 3: 
+--KPI 3: Annual Preterm Birth Rate
+
+SELECT
+	year,
+	SUM(CASE 
+		WHEN TRY_CAST(gestational_age_code AS INT) BETWEEN 1 AND 5
+		THEN births ELSE 0
+	END) AS Preterm_Births,
+
+	ROUND(
+		100.0 * SUM(CASE
+			WHEN TRY_CAST(gestational_age_code AS INT) BETWEEN 1 AND 5
+			THEN births ELSE 0
+		END)
+		/
+		NULLIF(SUM(CASE
+			WHEN TRY_CAST(gestational_age_code AS INT) BETWEEN 1 AND 9
+			THEN births ELSE 0
+		END), 0),
+		2
+	) AS Preterm_Birth_Rate
+
+	FROM dbo.gest_age
+	GROUP BY year
+	ORDER BY year;
