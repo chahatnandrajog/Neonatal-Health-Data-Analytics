@@ -55,3 +55,29 @@ SELECT
 	FROM dbo.gest_age
 	GROUP BY year
 	ORDER BY year;
+
+-- KPI 4: Avg birth weight
+SELECT 
+	ROUND(
+		SUM(births * average_birth_weight_grams)
+		/ NULLIF(SUM(births), 0),
+		2
+	) AS Average_Birth_Weight_Grams
+
+FROM dbo.birth_totals;
+
+
+-- Annual Avg birth weight
+SELECT
+	year,
+	ROUND(
+		SUM(births * average_birth_weight_grams)
+		/ NULLIF(SUM(births), 0),
+		2
+	) AS Average_Birth_Weight_Grams
+
+	FROM dbo.birth_totals
+	GROUP BY year
+	ORDER BY year;
+
+
