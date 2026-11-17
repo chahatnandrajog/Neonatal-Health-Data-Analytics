@@ -1,0 +1,6 @@
+encounter_id,facility,encounter_date,disposition,wait_minutes
+DEMO001,Boston,2026-10-01,admitted,35
+DEMO002,Boston,2026-10-01,discharged,95
+DEMO003,Raleigh,2026-10-02,transferred,50
+DEMO004,Raleigh,2026-10-02,admitted,72
+DEMO005,Boston,2026-10-03,discharged,20
