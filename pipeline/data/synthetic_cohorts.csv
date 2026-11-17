@@ -1,0 +1,7 @@
+year,group_name,births,low_birth_weight_births,preterm_births,birth_weight_grams_sum
+2022,Region A,1000,92,108,3210000
+2022,Region B,850,78,92,2720000
+2023,Region A,1080,94,110,3499200
+2023,Region B,910,81,99,2939300
+2024,Region A,1120,97,113,3628800
+2024,Region B,970,84,106,3133100
